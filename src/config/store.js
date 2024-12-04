@@ -9,7 +9,7 @@ const initialeState = {
       numeroCIN: "JB1111",
       genre: "Homme",
       dateNaissance: "1999-01-16",
-      photo: '/homme.png',
+      photo: '/gestion-cin/homme.png',
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const initialeState = {
       numeroCIN: "JB2222",
       genre: "Femme",
       dateNaissance: "2000-10-06",
-      photo: "/femme.png",
+      photo: "/gestion-cin/femme.png",
     },
   ],
 };
