@@ -8,7 +8,7 @@ import VueCIN from "./components/VueCIN";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/gestion-cin/">
         <Routes>
           <Route path="/" element={<AfficherCIN />} />
           <Route path="/ajouter-cin" element={<AjouterCIN />} />
