@@ -14,12 +14,13 @@ function AfficherCIN() {
   };
 
   return (
-    <div className="container mx-auto px-6 py-8">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold text-gray-800">Liste des CINs</h2>
         <Link to="/ajouter-cin">
           <button className="bg-indigo-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <i className="fa fa-plus mr-2"></i>
             Ajouter CIN
           </button>
         </Link>
