@@ -159,12 +159,22 @@ function ModifierCIN() {
           </div>
 
           {/* Bouton soumettre */}
-          <div className="text-center">
+
+          <div className="flex justify-center gap-4">
+            {/* Modifier Button */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-auto bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-md hover:from-blue-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               Modifier CIN
+            </button>
+            {/* Retour Button */}
+            <button
+              type="button"
+              className="w-auto bg-gray-600 text-white font-medium py-2 px-4 rounded-md shadow-md hover:from-blue-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              onClick={() => navigate("/")}
+            >
+              Retour
             </button>
           </div>
         </form>

@@ -131,13 +131,21 @@ function AjouterCIN() {
               />
             </div>
 
-            {/* Submit Button */}
-            <div className="text-center">
+            <div className="flex justify-center gap-4">
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-green-500 to-teal-600 text-white font-medium py-2 px-4 rounded-md shadow-md hover:from-green-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="w-auto bg-gradient-to-r from-green-500 to-teal-600 text-white font-medium py-2 px-4 rounded-md shadow-md hover:from-green-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-green-400"
               >
                 Ajouter CIN
+              </button>
+              {/* Retour Button */}
+              <button
+                type="button"
+                className="w-auto bg-gray-600 text-white font-medium py-2 px-4 rounded-md shadow-md hover:from-green-600 hover:to-teal-700 focus:outline-none focus:ring-2 focus:ring-green-400"
+                onClick={() => navigate("/")}
+              >
+                Retour
               </button>
             </div>
           </form>
