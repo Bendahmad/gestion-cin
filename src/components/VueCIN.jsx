@@ -8,6 +8,15 @@ function VueCIN() {
   const cinId = cins.find((cin) => cin.id === parseInt(id));
   const navigate = useNavigate();
 
+  const handleImageDownload = () => {
+    const link = document.createElement("a");
+    link.href = cinId.photo; // URL de l'image
+    link.download = `CIN_${cinId.nom}_${cinId.prenom}.jpg`; // Nom du fichier téléchargé
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   if (!cinId) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
@@ -59,12 +68,18 @@ function VueCIN() {
         </div>
 
         {/* Pied de la carte */}
-        <div className="bg-gray-100 text-center py-4 rounded-b-lg">
+        <div className="bg-gray-100 text-center py-4 rounded-b-lg space-x-4">
           <button
             className="bg-gray-600 text-white py-2 px-6 rounded-lg shadow hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
             onClick={() => navigate("/")}
           >
             Retour
+          </button>
+          <button
+            className="bg-green-600 text-white py-2 px-6 rounded-lg shadow hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400"
+            onClick={handleImageDownload}
+          >
+            Télécharger l'image
           </button>
         </div>
       </div>
